@@ -10,7 +10,7 @@ namespace exercise_oop
     internal class Commando
     {
        private string Name;
-       private int CodeName;
+        public int CodeName;
        public  string[] Tool = { "Hammer", "chisel", "rope", " bag", "water bottle" };
        public string Status;
 
