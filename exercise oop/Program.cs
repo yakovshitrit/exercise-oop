@@ -16,6 +16,7 @@ namespace exercise_oop
             Console.WriteLine(commando1.Walk());
             Console.WriteLine(commando1.Hide());
             Console.WriteLine(weapon1.Shoot());
+            Console.WriteLine(commando1.Name);
         }
 
     }

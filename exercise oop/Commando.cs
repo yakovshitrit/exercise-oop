@@ -9,10 +9,10 @@ namespace exercise_oop
 {
     internal class Commando
     {
-        string Name;
-        private int CodeName;
-        string[] Tool = { "Hammer", "chisel", "rope", " bag", "water bottle" };
-        string Status;
+       private string Name;
+       private int CodeName;
+       public  string[] Tool = { "Hammer", "chisel", "rope", " bag", "water bottle" };
+       public string Status;
 
         public  Commando(string name,int codename, string status)
         {
@@ -38,6 +38,24 @@ namespace exercise_oop
             return CodeName;
         }
 
+        public void SayName(string commenderRank)
+        {
+            if(commenderRank == "General")
+            {
+                Console.WriteLine( "it name is" + Name);
+            }
+            else
+            {
+                if(commenderRank == "Colonel")
+                {
+                    Console.WriteLine("it codename is " + CodeName); 
+                }
+                else
+                {
+                    Console.WriteLine("This is classified information");
+                }
+            }
+        }
             
             
             
