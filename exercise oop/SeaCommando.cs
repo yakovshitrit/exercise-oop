@@ -13,5 +13,10 @@ namespace exercise_oop
         {
             Status = "swim";
         }
+        public override void Attack()
+        {
+            Console.WriteLine($" the code name of seacommando {CodeName} attack");
+        }
     }
+
 }

@@ -12,12 +12,14 @@ namespace exercise_oop
         {
             Commando commando1 = new Commando("jon", 8339307, "standing");
             Weapon weapon1 = new Weapon("m16", "isral", 200);
-            Console.WriteLine( commando1.Attack());
+            commando1.Attack();
             Console.WriteLine(commando1.Walk());
             Console.WriteLine(commando1.Hide());
             Console.WriteLine(weapon1.Shoot());
             commando1.CodeName = 546544;
             Console.WriteLine(commando1.CodeName);
+            AirCommando aircommando = new AirCommando("dan", 234546, "standing");
+            aircommando.Attack();
         }
 
     }

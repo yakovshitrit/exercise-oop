@@ -9,46 +9,46 @@ namespace exercise_oop
 {
     internal class Commando
     {
-       private string Name;
+        private string Name;
         public int CodeName;
-       public  string[] Tool = { "Hammer", "chisel", "rope", " bag", "water bottle" };
-       public string Status;
+        public string[] Tool = { "Hammer", "chisel", "rope", " bag", "water bottle" };
+        public string Status;
 
-        public  Commando(string name,int codename, string status)
+        public Commando(string name, int codename, string status)
         {
             this.Name = name;
             this.CodeName = codename;
             this.Status = status;
         }
-          
-        public string Walk( )
-        {   
+
+        public string Walk()
+        {
             Status = "Walk";
             return Status;
         }
-           
+
         public string Hide()
         {
             Status = "Hide";
             return Status;
         }
 
-        public int Attack()
+        public virtual void Attack()
         {
-            return CodeName;
+            Console.WriteLine($" the code name {CodeName} attack");
         }
 
         public void SayName(string commenderRank)
         {
-            if(commenderRank == "General")
+            if (commenderRank == "General")
             {
-                Console.WriteLine( "it name is" + Name);
+                Console.WriteLine("it name is" + Name);
             }
             else
             {
-                if(commenderRank == "Colonel")
+                if (commenderRank == "Colonel")
                 {
-                    Console.WriteLine("it codename is " + CodeName); 
+                    Console.WriteLine("it codename is " + CodeName);
                 }
                 else
                 {
@@ -56,16 +56,23 @@ namespace exercise_oop
                 }
             }
         }
-            
-            
-            
-
-
-
-
-
-
-
 
     }
+    internal class AirCommando : Commando
+    {
+        public AirCommando(string name, int codename, string status) : base(name, codename, status) { }
+        
+
+
+
+        public void Parachute()
+        {
+            Status = "chute";
+        }
+
+        public override void Attack()
+        {
+            Console.WriteLine($" the code name of aircommando {CodeName} attack");
+        }
+    } 
 }
