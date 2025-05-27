@@ -11,14 +11,13 @@ namespace exercise_oop
     {
         string Name;
         private int CodeName;
-        string[] Tool;
+        string[] Tool = { "Hammer", "chisel", "rope", " bag", "water bottle" };
         string Status;
 
-        public  Commando(string name,int codename, string[] tool, string status)
+        public  Commando(string name,int codename, string status)
         {
             this.Name = name;
             this.CodeName = codename;
-            this.Tool = tool;
             this.Status = status;
         }
           
