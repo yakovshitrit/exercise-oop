@@ -20,6 +20,12 @@ namespace exercise_oop
             Console.WriteLine(commando1.CodeName);
             AirCommando aircommando = new AirCommando("dan", 234546, "standing");
             aircommando.Attack();
+            SeaCommando seacommando = new SeaCommando("arron", 345654, "standing") ;
+        Commando[] myarr = { commando1, aircommando , seacommando  };
+            foreach(Commando c in myarr)
+            {
+                c.Attack();
+            }
         }
 
     }
