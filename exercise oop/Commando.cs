@@ -66,6 +66,7 @@ namespace exercise_oop
 
 
         public void Parachute()
+
         {
             Status = "chute";
         }
