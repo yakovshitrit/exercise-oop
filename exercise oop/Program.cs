@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,11 @@ namespace exercise_oop
             AirCommando aircommando = new AirCommando("dan", 234546, "standing");
             aircommando.Attack();
             SeaCommando seacommando = new SeaCommando("arron", 345654, "standing") ;
-        Commando[] myarr = { commando1, aircommando , seacommando  };
+
+            Commando number1 = CreateComndo.Create("air","yal" ,34567,"standing");
+
+
+            Commando[] myarr = { commando1, aircommando , seacommando  };
             foreach(Commando c in myarr)
             {
                 c.Attack();
